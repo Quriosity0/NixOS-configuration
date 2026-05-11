@@ -190,6 +190,30 @@
     zerotierone.enable = true;
   };
 
+  environment.stub-ld.enable = false;
+
+  nix.nixPath = [
+    "nixos-config=/home/quriosity/nixconf/configuration.nix"
+    "nixpkgs=/nix/var/nix/profiles/per-user/root/channels/nixos"
+    "/nix/var/nix/profiles/per-user/root/channels"
+  ];
+
+
+  # --------------------------------------------------------------------------------------------------------
+  # ------------------------------------------ NETWORKING --------------------------------------------------
+  # --------------------------------------------------------------------------------------------------------
+
+  # programs.mtr.enable = true;
+  # programs.gnupg.agent = {
+  #   enable = true;
+  #   enableSSHSupport = true;
+  # };
+
+  # services.openssh.enable = true;
+
+  networking.firewall.allowedTCPPorts = [ 4899 ];
+  networking.firewall.allowedUDPPorts = [ 4899 ];
+
   networking.hosts = {
     "72.56.93.144" = [
       "a-api.anthropic.com"
@@ -254,30 +278,6 @@
       "www.openai.com"
     ];
   };
-
-  environment.stub-ld.enable = false;
-
-  nix.nixPath = [
-    "nixos-config=/home/quriosity/nixconf/configuration.nix"
-    "nixpkgs=/nix/var/nix/profiles/per-user/root/channels/nixos"
-    "/nix/var/nix/profiles/per-user/root/channels"
-  ];
-
-
-  # --------------------------------------------------------------------------------------------------------
-  # ------------------------------------------ NETWORKING --------------------------------------------------
-  # --------------------------------------------------------------------------------------------------------
-
-  # programs.mtr.enable = true;
-  # programs.gnupg.agent = {
-  #   enable = true;
-  #   enableSSHSupport = true;
-  # };
-
-  # services.openssh.enable = true;
-
-  networking.firewall.allowedTCPPorts = [ 4899 ];
-  networking.firewall.allowedUDPPorts = [ 4899 ];
 
   # networking.firewall.enable = false;
 
