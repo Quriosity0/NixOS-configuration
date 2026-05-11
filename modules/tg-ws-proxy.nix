@@ -11,7 +11,7 @@
     };
 
     Service = {
-      ExecStart = "${inputs.tg-ws-proxy.packages.${pkgs.system}.default}/bin/tg-ws-proxy --dc 2 --secret \${TG_SECRET}";
+      ExecStart = "${inputs.tg-ws-proxy.packages.${pkgs.system}.default}/bin/tg-ws-proxy --dc 2 --secret $TG_SECRET";
       EnvironmentFile = "%h/.config/tg-ws-proxy/env";
       Restart = "on-failure";
       RestartSec = "5s";
