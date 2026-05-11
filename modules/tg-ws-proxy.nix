@@ -12,8 +12,7 @@ in
     };
 
     Service = {
-      ExecStart = "${pkgs.bash}/bin/bash -c '${tg-ws-proxy-pkg}/bin/tg-ws-proxy --dc 2 --secret \"$TG_SECRET\"'";
-      EnvironmentFile = "%h/.config/tg-ws-proxy/env";
+      ExecStart = "${tg-ws-proxy-pkg}/bin/tg-ws-proxy --port 1080 --dc-ip 2:149.154.167.220 --dc-ip 4:149.154.167.220";
       Restart = "on-failure";
       RestartSec = "5s";
     };
