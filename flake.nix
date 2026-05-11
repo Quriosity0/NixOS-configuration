@@ -8,15 +8,17 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
-    spicetify-nix.url = "github:Gerg-L/spicetify-nix";
-
-    millennium.url = "github:SteamClientHomebrew/Millennium?dir=packages/nix";
-
     zapret-discord-youtube = {
       url = "github:kartavkun/zapret-discord-youtube";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    tg-ws-proxy = {
+      url = "github:pialtor/tg-ws-proxy-flake";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    spicetify-nix.url = "github:Gerg-L/spicetify-nix";
+    millennium.url = "github:SteamClientHomebrew/Millennium?dir=packages/nix";
   };
 
   outputs = inputs@{ nixpkgs, home-manager, millennium, zapret-discord-youtube, ... }:
