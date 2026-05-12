@@ -8,7 +8,7 @@ let
   text = ''
     attempts=0
     while [ "$attempts" -lt 60 ]; do
-      if pgrep -x "telegram-desktop" > /dev/null; then
+      if pgrep -f "materialgram" > /dev/null; then
         sleep 2
         link=$(journalctl --user -u tg-ws-proxy -n 30 --no-pager \
           | grep "tg://" \
