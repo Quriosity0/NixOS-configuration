@@ -57,6 +57,7 @@ in
 
     Service = {
       Type = "oneshot";
+      ExecStartPre = "${pkgs.coreutils}/bin/rm -f /tmp/tg-proxy-connected";
       ExecStart = "${connect-script}/bin/tg-ws-proxy-connect";
       ExecStartPost = "${pkgs.coreutils}/bin/touch /tmp/tg-proxy-connected";
     };
