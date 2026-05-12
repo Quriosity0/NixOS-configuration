@@ -57,6 +57,7 @@ in
     Service = {
       Type = "oneshot";
       RemainAfterExit = true;
+      ExecStartPre = "${pkgs.coreutils}/bin/sleep 10";
       ExecStart = "${connect-script}/bin/tg-ws-proxy-connect";
     };
 
