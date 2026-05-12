@@ -191,6 +191,7 @@
   };
 
   environment.stub-ld.enable = false;
+  boot.tmp.cleanOnBoot = true;
 
   nix.nixPath = [
     "nixos-config=/home/quriosity/nixconf/configuration.nix"
