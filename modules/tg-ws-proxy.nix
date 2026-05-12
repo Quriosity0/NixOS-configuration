@@ -28,7 +28,6 @@ in
       ExecStartPost = "${notify-and-connect-script}";
       Restart = "on-failure";
       RestartSec = "5s";
-      # Пробрасываем переменные Wayland-сессии
       Environment = "PATH=${pkgs.xdg-utils}/bin:${pkgs.libnotify}/bin";
     };
 
