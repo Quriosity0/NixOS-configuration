@@ -1,17 +1,27 @@
 { inputs, pkgs, ... }:
 let
   tg-ws-proxy-pkg = inputs.tg-ws-proxy.packages.${pkgs.stdenv.hostPlatform.system}.default;
-  notify-and-connect-script = pkgs.writeShellScript "tg-ws-proxy-notify" ''
-    sleep 2
-    link=$(journalctl --user -u tg-ws-proxy -n 30 --no-pager \
-      | grep "tg://" \
-      | sed "s/.*tg:/tg:/")
 
-    if [ -n "$link" ]; then
-      ${pkgs.libnotify}/bin/notify-send -t 0 "tg-ws-proxy" "$link"
-      ${pkgs.xdg-utils}/bin/xdg-open "$link"
-    fi
-  '';
+  connect-script = pkgs.writeShellApplication {
+    name = "tg-ws-proxy-connect";
+    runtimeInputs = [ pkgs.xdg-utils pkgs.systemd pkgs.procps ];
+    text = ''
+      # Ждём пока Telegram запустится (до 5 минут)
+      for i in $(seq 1 60); do
+        if pgrep -x "telegram-desktop" > /dev/null; then
+          sleep 2
+          link=$(journalctl --user -u tg-ws-proxy -n 30 --no-pager \
+            | grep "tg://" \
+            | sed "s/.*tg:/tg:/")
+          if [ -n "$link" ]; then
+            xdg-open "$link"
+          fi
+          exit 0
+        fi
+        sleep 5
+      done
+    '';
+  };
 in
 {
   home.packages = [ tg-ws-proxy-pkg ];
@@ -25,14 +35,31 @@ in
 
     Service = {
       ExecStart = "${tg-ws-proxy-pkg}/bin/tg-ws-proxy --port 1080 --dc-ip 2:149.154.167.220 --dc-ip 4:149.154.167.220";
-      ExecStartPost = "${notify-and-connect-script}";
       Restart = "on-failure";
       RestartSec = "5s";
-      Environment = "PATH=${pkgs.xdg-utils}/bin:${pkgs.libnotify}/bin";
     };
 
     Install = {
       WantedBy = [ "default.target" ];
+    };
+  };
+
+  systemd.user.services.tg-proxy-connect = {
+    Unit = {
+      Description = "Connect Telegram to MTProxy after launch";
+      After = [ "tg-ws-proxy.service" "graphical-session.target" ];
+      Wants = [ "tg-ws-proxy.service" ];
+      ConditionPathExists = "!/tmp/tg-proxy-connected";
+    };
+
+    Service = {
+      Type = "oneshot";
+      ExecStart = "${connect-script}/bin/tg-ws-proxy-connect";
+      ExecStartPost = "${pkgs.coreutils}/bin/touch /tmp/tg-proxy-connected";
+    };
+
+    Install = {
+      WantedBy = [ "graphical-session.target" ];
     };
   };
 }
