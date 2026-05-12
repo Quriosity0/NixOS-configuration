@@ -52,14 +52,12 @@ in
       Description = "Connect Telegram to MTProxy after launch";
       After = [ "tg-ws-proxy.service" "graphical-session.target" ];
       Wants = [ "tg-ws-proxy.service" ];
-      ConditionPathExists = "!/tmp/tg-proxy-connected";
     };
 
     Service = {
       Type = "oneshot";
-      ExecStartPre = "${pkgs.coreutils}/bin/rm -f /tmp/tg-proxy-connected";
+      RemainAfterExit = true;
       ExecStart = "${connect-script}/bin/tg-ws-proxy-connect";
-      ExecStartPost = "${pkgs.coreutils}/bin/touch /tmp/tg-proxy-connected";
     };
 
     Install = {
