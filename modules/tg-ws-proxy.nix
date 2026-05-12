@@ -27,7 +27,7 @@ let
   };
 in
 {
-  home.packages = [ tg-ws-proxy-pkg ];
+  home.packages = [ tg-ws-proxy-pkg connect-script ];
 
   systemd.user.services.tg-ws-proxy = {
     Unit = {
