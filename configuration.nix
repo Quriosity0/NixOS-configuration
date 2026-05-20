@@ -190,6 +190,7 @@
     zerotierone.enable = true;
   };
 
+  programs.coolercontrol.enable = true;
   environment.stub-ld.enable = false;
   boot.tmp.cleanOnBoot = true;
 
