@@ -2,7 +2,7 @@
   description = "Home Manager configuration of quriosity";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/7138b26451e6ccb06b62884ce76edb46e358df75";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
 
     home-manager = {
       url = "github:nix-community/home-manager";

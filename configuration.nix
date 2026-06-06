@@ -15,7 +15,7 @@
   boot.loader.efi.canTouchEfiVariables = true;
 
 
-  boot.kernelPackages = pkgs.linuxPackages_6_19;
+  boot.kernelPackages = pkgs.linuxPackages_latest;
 
 
   boot.extraModulePackages = with config.boot.kernelPackages; [
@@ -78,7 +78,7 @@
     powerManagement.finegrained = false;
     open = false;
     nvidiaSettings = true;
-    package = config.boot.kernelPackages.nvidiaPackages.stable;
+    package = config.boot.kernelPackages.nvidiaPackages.latest;
   };
 
 
@@ -109,6 +109,7 @@
     vlc
     flameshot
     zenity
+    cursor-cli
   ];
 
   # fonts
