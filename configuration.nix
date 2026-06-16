@@ -58,7 +58,7 @@
   users.users.quriosity = {
     isNormalUser = true;
     description = "Quriosity";
-    extraGroups = [ "networkmanager" "wheel" "docker" ];
+    extraGroups = [ "networkmanager" "wheel" "docker" "kvm" ];
     packages = with pkgs; [];
   };
 
@@ -110,6 +110,7 @@
     flameshot
     zenity
     cursor-cli
+    vmware-workstation
   ];
 
   # fonts
@@ -177,6 +178,7 @@
 
   programs.amnezia-vpn.enable = true;
   virtualisation.docker.enable = true;
+  virtualisation.vmware.host.enable = true;
 
   # --------------------------------------------------------------------------------------------------------
   # -------------------------------------------- SERVICES --------------------------------------------------
@@ -213,9 +215,6 @@
   # };
 
   # services.openssh.enable = true;
-
-  networking.firewall.allowedTCPPorts = [ 4899 ];
-  networking.firewall.allowedUDPPorts = [ 4899 ];
 
   networking.hosts = {
     "72.56.93.144" = [

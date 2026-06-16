@@ -16,7 +16,6 @@
         zulu
       ];
     })
-    winboat
     docker
     docker-compose
     droidcam
