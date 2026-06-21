@@ -118,6 +118,9 @@
     freetype
     fontconfig
     dejavu_fonts
+    (google-fonts.override {
+      fonts = [ "MontserratAlternates" ];
+    })
   ];
 
   # exclude useless kde apps
