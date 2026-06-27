@@ -22,6 +22,7 @@
     tor-browser
     gitkraken
     haguichi
+    faugus-launcher
   ];
 
   # OBS
