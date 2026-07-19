@@ -10,7 +10,7 @@ My personal configuration files for **NixOS** Linux (system + Home manager, buil
 ## Requirements
 
 - [NixOS](https://nixos.org/) ***unstable*** with flakes enabled
-- [home-manager](https://github.com/nix-community/home-manager) (в режиме flake)
+- [home-manager](https://github.com/nix-community/home-manager)
 
 To enable flakes, when rebuilding system add `--experimental-features 'nix-command flakes'` flag. It should look something like this
 
@@ -55,6 +55,8 @@ home-manager switch --flake ~/nixconf#quriosity
 ## Credits
 
 **Thank you all for excelent work**
+
+### flakes and their authors
 
 [Nix by Eelco Dolstra](https://nixos.org/)
 
