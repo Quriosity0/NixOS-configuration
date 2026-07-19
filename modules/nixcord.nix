@@ -92,7 +92,7 @@
         iLoveSpam.enable = true;
         imageZoom = {
           enable = true;
-          size = 140;
+          size = 140.0;
           zoom = 2.8;
         };
         iRememberYou.enable = true;
