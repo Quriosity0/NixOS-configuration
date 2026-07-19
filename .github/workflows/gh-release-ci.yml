@@ -73,7 +73,7 @@ jobs:
           mkdir -p pkg
           cp configuration.nix home.nix flake.nix flake.lock hardware-configuration.nix pkg/
           cp -r modules pkg/modules
-          tar -czf nixconf-unstable-config.tar.gz -C pkg .
+          tar -czf nixconf-unstable.tar.gz -C pkg .
 
       - name: Create release
         run: |
@@ -83,11 +83,11 @@ jobs:
             --notes-file release-notes.md \
             --target "${{ github.sha }}" \
             --prerelease \
-            nixconf-unstable-config.tar.gz
+            nixconf-unstable.tar.gz
         env:
           GH_TOKEN: ${{ github.token }}
 
-      - name: Delete previous unstable release (keep its tag)
+      - name: Delete previous unstable release
         if: steps.meta.outputs.prev_tag != ''
         run: |
           set -euo pipefail
