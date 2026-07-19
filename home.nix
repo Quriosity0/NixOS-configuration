@@ -11,7 +11,6 @@
   ];
 
   home.packages = with pkgs; [
-    discord
     (prismlauncher.override {
       additionalPrograms = [ ffmpeg ];
       jdks = [
