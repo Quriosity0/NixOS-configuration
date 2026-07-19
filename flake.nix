@@ -10,7 +10,13 @@
     };
     proxy-suite = {
       url = "github:FUFSoB/proxy-suite-flake";
-      inputs.nixpkgs.follows = "nixpkgs";
+      inputs = {
+        nixpkgs.follows = "nixpkgs";
+        zapret = {
+          url = "github:egwuregwu/zapret-discord-youtube";
+          inputs.zapret-flowseal.url = "github:Flowseal/zapret-discord-youtube";
+        };
+      };
     };
     nixcord = {
       url = "github:4evy/nixcord";

@@ -213,6 +213,22 @@
     "nixpkgs_4": {
       "locked": {
         "lastModified": 1784356753,
+        "narHash": "sha256-12KrbMiWLcf8m7pCvAtZh1ZrgF85ZXDXvfR/fWTKy84=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "61b7c44c4073f0b827768aff0049561b5110ea5a",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "ref": "nixos-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "nixpkgs_5": {
+      "locked": {
+        "lastModified": 1784356753,
         "narHash": "sha256-zupdTm41be2fY8cexroEOGjopl3F2Gqs3gk7ieqaM3s=",
         "rev": "61b7c44c4073f0b827768aff0049561b5110ea5a",
         "type": "tarball",
@@ -257,7 +273,7 @@
     },
     "spicetify-nix": {
       "inputs": {
-        "nixpkgs": "nixpkgs_4",
+        "nixpkgs": "nixpkgs_5",
         "systems": "systems"
       },
       "locked": {
@@ -291,34 +307,37 @@
     },
     "zapret": {
       "inputs": {
-        "nixpkgs": [
-          "proxy-suite",
-          "nixpkgs"
-        ],
+        "nixpkgs": "nixpkgs_4",
         "zapret-flowseal": "zapret-flowseal"
       },
       "locked": {
-        "lastModified": 1,
-        "narHash": "sha256-Q9w9hxzimX0O0wqQTfMJk/tEIvRtYI7GclLHSQAatKY=",
-        "type": "tarball",
-        "url": "https://archive.org/download/zapret-tgws-nix-2026-07-10/zapret-discord-youtube.tar.gz"
+        "lastModified": 1784487101,
+        "narHash": "sha256-5rAuYzmK2jsHIIHVbzi99lzfCgq7QKtv72FZjGbMezg=",
+        "owner": "egwuregwu",
+        "repo": "zapret-discord-youtube",
+        "rev": "27efbcfcd3f8fbe4275505bdb4c4898077086ed4",
+        "type": "github"
       },
       "original": {
-        "type": "tarball",
-        "url": "https://archive.org/download/zapret-tgws-nix-2026-07-10/zapret-discord-youtube.tar.gz"
+        "owner": "egwuregwu",
+        "repo": "zapret-discord-youtube",
+        "type": "github"
       }
     },
     "zapret-flowseal": {
       "flake": false,
       "locked": {
-        "lastModified": 1,
-        "narHash": "sha256-OJ14gttWLGVkwG4XR5LZdK2UOxMhIjwdrGo7x8YSiNE=",
-        "type": "tarball",
-        "url": "https://archive.org/download/zapret-tgws-nix-2026-07-10/zapret-flowseal.tar.gz"
+        "lastModified": 1784378317,
+        "narHash": "sha256-jR7FwIZtCuRHRvNTX2GXrHdDR0APIrHGpf9hxbBPYcQ=",
+        "owner": "Flowseal",
+        "repo": "zapret-discord-youtube",
+        "rev": "1a7d98d506796a735e06e4270a7a5f6435e9fa0a",
+        "type": "github"
       },
       "original": {
-        "type": "tarball",
-        "url": "https://archive.org/download/zapret-tgws-nix-2026-07-10/zapret-flowseal.tar.gz"
+        "owner": "Flowseal",
+        "repo": "zapret-discord-youtube",
+        "type": "github"
       }
     }
   },
