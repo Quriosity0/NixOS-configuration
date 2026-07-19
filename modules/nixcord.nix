@@ -133,7 +133,7 @@
         notificationTitle.enable = true;
         notificationVolume = {
           enable = true;
-          notificationVolume = 50;
+          notificationVolume = 50.0;
         };
         noTypingAnimation.enable = true;
         noUnblockToJump.enable = true;
