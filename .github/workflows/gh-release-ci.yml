@@ -60,7 +60,7 @@ jobs:
       - name: Write release notes
         run: |
           cat > release-notes.md <<EOF
-          # Unstable (${{ steps.meta.outputs.human_date }}) **USE WITH CAUTION**
+          # Unstable ${{ steps.meta.outputs.human_date }} **USE WITH CAUTION**
 
           **Unstable releases called unstable because they can break everything. Make sure to backup your system before updating it**
 
