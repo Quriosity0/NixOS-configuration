@@ -112,6 +112,7 @@
     flameshot
     zenity
     cursor-cli
+    (pkgs.callPackage ./modules/echo-sddm.nix {})
   ];
 
   # Package settings
@@ -215,6 +216,7 @@
     fontconfig
     dejavu_fonts
     nerdfonts
+    jetbrains-mono
     (google-fonts.override {
       fonts = [ "MontserratAlternates" ];
     })
@@ -233,8 +235,19 @@
   # --------------------------------------------------------------------------------------------------------
 
   services = {
-    displayManager.sddm.enable = true;
-    displayManager.sddm.wayland.enable = true;
+    displayManager = {
+      sddm = {
+        enable = true;
+        wayland.enable = true;
+        theme = "echo";
+        package = pkgs.kdePackages.sddm;
+        extraPackages = with pkgs.qt6; [
+          qtsvg
+          qtdeclarative
+          qt5compat
+        ];
+      };
+    };
     desktopManager.plasma6.enable = true;
     flatpak.enable = true;
     zerotierone.enable = true;
