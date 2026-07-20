@@ -95,7 +95,7 @@
   # -------------------------------------------- PACKAGES --------------------------------------------------
   # --------------------------------------------------------------------------------------------------------
 
-  # Packages installation
+  # Package installation
   environment.systemPackages = with pkgs; [
     vim
     wget
@@ -166,9 +166,17 @@
       ohMyZsh = {
         enable = true;
         plugins = [
-          ""
+          "web-search"
+          "z"
+          "sudo"
+          "gpg-agent"
         ];
-        theme = "half-life";
+        theme = "ys";
+      };
+      shellAliases = {
+        la = "ls -la";
+        cls = "clear";
+        # cd = "z";
       };
       histSize = 10000;
       histFile = "$HOME/.zsh_history";
