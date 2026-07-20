@@ -20,33 +20,43 @@
         zulu
       ];
     })
-    docker
-    docker-compose
     droidcam
     tor-browser
     gitkraken
     haguichi
     faugus-launcher
+    vmware-workstation
+    materialgram
+    hardinfo2
+    vlc
+
+    kdePackages.sddm-kcm
+    kdePackages.partitionmanager
+    kdePackages.ktorrent
+    kdePackages.qtstyleplugin-kvantum
+    kdePackages.kdenlive
   ];
 
   # OBS
-  programs.obs-studio = {
-    enable = true;
-    package = (
-      pkgs.obs-studio.override {
-        cudaSupport = true;
-      }
-    );
-    plugins = with pkgs.obs-studio-plugins; [
-      obs-backgroundremoval
-      obs-pipewire-audio-capture
-      obs-vaapi
-      obs-gstreamer
-      obs-vkcapture
-      input-overlay
-      obs-multi-rtmp
-      obs-livesplit-one
-    ];
+  programs = {
+    obs-studio = {
+      enable = true;
+      package = (
+        pkgs.obs-studio.override {
+          cudaSupport = true;
+        }
+      );
+      plugins = with pkgs.obs-studio-plugins; [
+        obs-backgroundremoval
+        obs-pipewire-audio-capture
+        obs-vaapi
+        obs-gstreamer
+        obs-vkcapture
+        input-overlay
+        obs-multi-rtmp
+        obs-livesplit-one
+      ];
+    };
   };
 
   # hush (NVIDIA Maxine denoiser virtual microphone)
@@ -61,13 +71,16 @@
     NIX_PATH="nixos-config=/home/quriosity/nixconf/configuration.nix";
   };
 
+  home = {
+    username = "quriosity";
+    homeDirectory = "/home/quriosity";
+  };
+
   # --------------------------------------------------------------------------------------------------------
   # ------------------------------------------ DO NOT TOUCH ------------------------------------------------
   # --------------------------------------------------------------------------------------------------------
 
   programs.home-manager.enable = true;
   home.stateVersion = "25.11";
-  home.username = "quriosity";
-  home.homeDirectory = "/home/quriosity";
   nixpkgs.config.allowUnfree = true;
 }
