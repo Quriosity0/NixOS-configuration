@@ -34,6 +34,8 @@
 
   time.timeZone = "Europe/Moscow";
 
+  system.nixos.label = "NixOS";
+
   i18n = {
     defaultLocale = "en_US.UTF-8";
     extraLocaleSettings = {
@@ -54,11 +56,13 @@
     variant = "";
   };
 
-  users.users.quriosity = {
-    isNormalUser = true;
-    description = "Quriosity";
-    extraGroups = [ "networkmanager" "wheel" "kvm" ];
-    packages = with pkgs; [];
+  users.users = {
+    quriosity = {
+      isNormalUser = true;
+      description = "Quriosity";
+      extraGroups = [ "networkmanager" "wheel" "kvm" ];
+      shell = pkgs.zsh;
+    };
   };
 
   # --------------------------------------------------------------------------------------------------------
@@ -152,6 +156,24 @@
         libx11
         libxi
         libpng
+      ];
+    };
+    zsh = {
+      enable = true;
+      enableCompletion = true;
+      autosuggestions.enable = true;
+      syntaxHighlighting.enable = true;
+      ohMyZsh = {
+        enable = true;
+        plugins = [
+          ""
+        ];
+        theme = "half-life";
+      };
+      histSize = 10000;
+      histFile = "$HOME/.zsh_history";
+      setOptions = [
+        "HIST_IGNORE_ALL_DUPS"
       ];
     };
     gnupg.agent = {
