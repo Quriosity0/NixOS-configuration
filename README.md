@@ -12,10 +12,16 @@ My personal configuration files for **NixOS** Linux (system + Home manager, buil
 - [NixOS](https://nixos.org/) ***unstable*** with flakes enabled
 - [home-manager](https://github.com/nix-community/home-manager)
 
-To enable flakes, when rebuilding system add `--experimental-features 'nix-command flakes'` flag. It should look something like this
+### NOTE!
+
+Nix Flakes is an experimental feature. To enable flakes, when rebuilding system add `--experimental-features 'nix-command flakes'` flag. 
+
+Unfree repository is disabled by default. To allow NixOS unfree packages, use NIXPKGS_ALLOW_UNFREE=1. 
+
+Final command should look something like this
 
 ```nix
-sudo nixos-rebuild switch --flake ~/nixconf#asuspc --experimental-features 'nix-command flakes'
+NIXPKGS_ALLOW_UNFREE=1 sudo nixos-rebuild switch --flake /path/to/nixconf#asuspc --experimental-features 'nix-command flakes'
 ```
 
 ## Installation and updating
