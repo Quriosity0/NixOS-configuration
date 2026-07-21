@@ -15,6 +15,16 @@
   boot = {
     kernelPackages = pkgs.linuxPackages_latest;
     loader = {
+      #limine = {
+      #  enable = true;
+      #  resolution = 1920x1080
+      #  maxGenerations = 10;
+      #  style = {
+      #    interface = {
+      #      branding = "NixOS";
+      #    };
+      #  };
+      #};
       systemd-boot.enable = true;
       efi.canTouchEfiVariables = true;
     };
