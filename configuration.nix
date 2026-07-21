@@ -187,6 +187,7 @@
       shellAliases = {
         la = "ls -la";
         cls = "clear";
+        nfl = "nix flake update";
         # cd = "z";
       };
       histSize = 10000;

@@ -30,6 +30,9 @@
     hardinfo2
     vlc
 
+    nur.repos.trev.helium
+    nur.repos.novel2430.zen-browser
+
     kdePackages.sddm-kcm
     kdePackages.partitionmanager
     kdePackages.ktorrent
