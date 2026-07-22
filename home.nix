@@ -29,6 +29,7 @@
     materialgram
     hardinfo2
     vlc
+    zed-editor
 
     nur.repos.trev.helium
     nur.repos.novel2430.zen-browser
