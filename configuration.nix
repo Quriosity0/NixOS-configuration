@@ -251,7 +251,7 @@
         enable = true;
         wayland.enable = true;
         theme = "echo";
-        package = pkgs.kdePackages.sddm;
+        # package = pkgs.kdePackages.sddm;
         extraPackages = with pkgs.qt6; [
           qtsvg
           qtdeclarative
