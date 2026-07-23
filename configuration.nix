@@ -119,7 +119,7 @@
     podman-tui
 
     firefox
-    hyper
+    #hyper
     flameshot
     zenity
     cursor-cli
@@ -238,7 +238,7 @@
     kdePackages.elisa
     kdePackages.spectacle
     kdePackages.qrca
-    kdePackages.konsole
+    #kdePackages.konsole
   ];
 
   # --------------------------------------------------------------------------------------------------------
