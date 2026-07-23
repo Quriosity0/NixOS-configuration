@@ -123,6 +123,7 @@
     flameshot
     zenity
     cursor-cli
+    (pkgs.callPackage ./modules/echo-sddm.nix {})
   ];
 
   # Package settings
