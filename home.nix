@@ -32,7 +32,7 @@
     zed-editor
 
     nur.repos.trev.helium
-    nur.repos.novel2430.zen-browser
+    nur.repos.novel2430.zen-browser-bin
 
     kdePackages.sddm-kcm
     kdePackages.partitionmanager
