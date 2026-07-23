@@ -31,9 +31,10 @@
     vlc
     zed-editor
     keepassxc
+    xnviewmp
 
     nur.repos.trev.helium
-    nur.repos.novel2430.zen-browser-bin
+    #nur.repos.novel2430.zen-browser-bin
 
     kdePackages.sddm-kcm
     kdePackages.partitionmanager
