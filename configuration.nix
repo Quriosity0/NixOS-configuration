@@ -18,7 +18,6 @@
       limine = {
         enable = true;
         resolution = 1920x1080
-        maxGenerations = 10;
         style = {
           wallpapers = [ pkgs.nixos-artwork.wallpapers.gear ];
           interface = {
