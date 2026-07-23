@@ -30,6 +30,7 @@
     hardinfo2
     vlc
     zed-editor
+    keepassxc
 
     nur.repos.trev.helium
     nur.repos.novel2430.zen-browser-bin

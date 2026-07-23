@@ -119,10 +119,10 @@
     podman-tui
 
     firefox
+    hyper
     flameshot
     zenity
     cursor-cli
-    (pkgs.callPackage ./modules/echo-sddm.nix {})
   ];
 
   # Package settings
@@ -188,7 +188,6 @@
         la = "ls -la";
         cls = "clear";
         nfl = "nix flake update";
-        # cd = "z";
       };
       histSize = 10000;
       histFile = "$HOME/.zsh_history";
@@ -239,6 +238,7 @@
     kdePackages.elisa
     kdePackages.spectacle
     kdePackages.qrca
+    kdePackages.konsole
   ];
 
   # --------------------------------------------------------------------------------------------------------
@@ -253,11 +253,11 @@
         wayland.enable = true;
         theme = "echo";
         # package = pkgs.kdePackages.sddm;
-        extraPackages = with pkgs.qt6; [
-          qtsvg
-          qtdeclarative
-          qt5compat
-        ];
+        extraPackages = (with pkgs.qt6; [
+            qtsvg
+            qtdeclarative
+            qt5compat
+          ]) ++ [ (pkgs.callPackage ./modules/echo-sddm.nix {}) ];
       };
     };
     desktopManager.plasma6.enable = true;
