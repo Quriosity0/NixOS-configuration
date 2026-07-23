@@ -15,17 +15,17 @@
   boot = {
     kernelPackages = pkgs.linuxPackages_latest;
     loader = {
-      #limine = {
-      #  enable = true;
-      #  resolution = 1920x1080
-      #  maxGenerations = 10;
-      #  style = {
-      #    interface = {
-      #      branding = "NixOS";
-      #    };
-      #  };
-      #};
-      systemd-boot.enable = true;
+      limine = {
+        enable = true;
+        resolution = 1920x1080
+        maxGenerations = 10;
+        style = {
+          wallpapers = [ pkgs.nixos-artwork.wallpapers.gear ];
+          interface = {
+            branding = "NixOS";
+          };
+        };
+      };
       efi.canTouchEfiVariables = true;
     };
     extraModulePackages = with config.boot.kernelPackages; [
@@ -114,6 +114,7 @@
     fastfetch
     btop
     gnupg
+    gdu
     home-manager
     podman-compose
     podman-tui
@@ -122,7 +123,6 @@
     #hyper
     flameshot
     zenity
-    cursor-cli
     (pkgs.callPackage ./modules/echo-sddm.nix {})
   ];
 
@@ -189,6 +189,7 @@
         la = "ls -la";
         cls = "clear";
         nfl = "nix flake update";
+        update = "sudo nixos-rebuild switch --flake ~/nixconf#asuspc && home-manager switch --flake ~/nixconf#quriosity";
       };
       histSize = 10000;
       histFile = "$HOME/.zsh_history";
@@ -239,6 +240,7 @@
     kdePackages.elisa
     kdePackages.spectacle
     kdePackages.qrca
+    kdePackages.gwenview
     #kdePackages.konsole
   ];
 
