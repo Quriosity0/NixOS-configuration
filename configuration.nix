@@ -226,8 +226,9 @@
     freetype
     fontconfig
     dejavu_fonts
-    nerdfonts
-    jetbrains-mono
+    nerd-fonts.jetbrains-mono
+    nerd-fonts.ubuntu
+    nerd-fonts.ubuntu-mono
     (google-fonts.override {
       fonts = [ "MontserratAlternates" ];
     })
