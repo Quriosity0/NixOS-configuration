@@ -12,7 +12,7 @@
     discord.equicord.enable = true;
 
     # Equicord's QuickCSS
-    quickCss = "@import url('https://raw.githubusercontent.com/Krammeth/css-snippets/refs/heads/main/PopoutsRevamped.css');\n@import url(https://davart154.github.io/Themes/Snippets/Simplified%20Panel%20Area/SimplifiedPanelArea.css);\n\n/* reduce context menu padding */\n.layer_da8173 > .menu_c1e9c4 {\n    min-width: 0;\n    width: 171px !important;\n    .scroller_c1e9c4 {\n        /* border margin */\n        margin: -4px;\n    }\n    .separator_c1e9c4 {\n        /* separator margin */\n        margin: 1px 8px !important;\n    }\n    .wrapper_f563df {\n        /* reactions margin */\n        padding: 0px !important;\n        margin: 1px;\n    }\n    .item_c1e9c4 {\n        /* min-height is 32px as default, change value for desired look */\n        min-height: 0;\n        /* padding is 4px 8px as default, change value for desired look */\n        padding: 4px 8px;\n    }\n    .icon_f563df {\n        /* reactions size */\n        width: 18px;\n    }\n    .button_f563df {\n        /* reactions border size */\n        width: 36px;\n        height: 36px;\n        border-radius: 4px;\n    }\n    .icon_c1e9c4 {\n        /* icons size */\n        width: 18px;\n        height: 18px;\n    }\n    .iconContainer_c1e9c4 {\n        display: flex;\n        justify-content: center;\n        align-items: center;\n    }\n}\n\n/* change font to ubuntu nerd */\n:root {\n    --font-primary: \"Ubuntu Nerd Font\" !important;\n    --font-display: \"Ubuntu Nerd Font\" !important;\n    --font-headline: \"Ubuntu Nerd Font\" !important;\n    --font-code: \"UbuntuMono Nerd Font\" !important;\n}\n";
+    quickCss = "@import url('https://raw.githubusercontent.com/Krammeth/css-snippets/refs/heads/main/PopoutsRevamped.css');\n@import url(https://davart154.github.io/Themes/Snippets/Simplified%20Panel%20Area/SimplifiedPanelArea.css);\n\n/* reduce context menu padding */\n.layer_da8173 > .menu_c1e9c4 {\n    min-width: 0;\n    width: 171px !important;\n    .scroller_c1e9c4 {\n        /* border margin */\n        margin: -4px;\n    }\n    .separator_c1e9c4 {\n        /* separator margin */\n        margin: 1px 8px !important;\n    }\n    .wrapper_f563df {\n        /* reactions margin */\n        padding: 0px !important;\n        margin: 1px;\n    }\n    .item_c1e9c4 {\n        /* min-height is 32px as default, change value for desired look */\n        min-height: 0;\n        /* padding is 4px 8px as default, change value for desired look */\n        padding: 4px 8px;\n    }\n    .icon_f563df {\n        /* reactions size */\n        width: 18px;\n    }\n    .button_f563df {\n        /* reactions border size */\n        width: 36px;\n        height: 36px;\n        border-radius: 4px;\n    }\n    .icon_c1e9c4 {\n        /* icons size */\n        width: 18px;\n        height: 18px;\n    }\n    .iconContainer_c1e9c4 {\n        display: flex;\n        justify-content: center;\n        align-items: center;\n    }\n}\n\n/* change font to ubuntu nerd */\n:root {\n    --font-primary: \"Ubuntu Nerd Font\", \"Noto Color Emoji\" !important;\n    --font-display: \"Ubuntu Nerd Font\", \"Noto Color Emoji\" !important;\n    --font-headline: \"Ubuntu Nerd Font\", \"Noto Color Emoji\" !important;\n    --font-code: \"UbuntuMono Nerd Font\", \"Noto Color Emoji\" !important;\n}\n";
 
     # Extensions configuration
     config = {
@@ -75,10 +75,6 @@
         findReply.enable = true;
         fixFileExtensions.enable = true;
         fixImagesQuality.enable = true;
-        fontLoader = {
-          enable = true;
-          selectedFont = "Funnel Sans";
-        };
         forceOwnerCrown.enable = true;
         friendCodes.enable = true;
         friendInvites.enable = true;
