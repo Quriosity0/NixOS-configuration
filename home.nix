@@ -34,7 +34,7 @@
     xnviewmp
 
     nur.repos.trev.helium
-    #nur.repos.novel2430.zen-browser-bin
+    #nur.repos.quriosity.zen-browser # not in the NUR at the moment of commit
 
     kdePackages.sddm-kcm
     kdePackages.partitionmanager
