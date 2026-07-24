@@ -120,10 +120,10 @@
     podman-tui
 
     firefox
-    #hyper
+    #hyper # package broken??? Fuhhh
     flameshot
     zenity
-    (pkgs.callPackage ./modules/echo-sddm.nix {})
+    (pkgs.callPackage ./modules/echo-sddm.nix {}) # switch to nur.repos.quriosity.echo-sddm when pr will be approved
   ];
 
   # Package settings
@@ -189,6 +189,7 @@
         la = "ls -la";
         cls = "clear";
         nfl = "nix flake update";
+        nfc = "nix flake check";
         update = "sudo nixos-rebuild switch --flake ~/nixconf#asuspc && home-manager switch --flake ~/nixconf#quriosity";
       };
       histSize = 10000;
@@ -241,7 +242,7 @@
     kdePackages.spectacle
     kdePackages.qrca
     kdePackages.gwenview
-    #kdePackages.konsole
+    #kdePackages.konsole # remove comment and switch to other terminal emulator
   ];
 
   # --------------------------------------------------------------------------------------------------------
@@ -288,6 +289,7 @@
   networking = {
     networkmanager.enable = true;
     hosts = {
+      # OpenAI/anthropic rufix
       "72.56.93.144" = [
         "a-api.anthropic.com"
         "a-cdn.anthropic.com"
@@ -350,11 +352,103 @@
         "www.chatgpt.com"
         "www.openai.com"
       ];
+      # Spotify rufix
+      "63.141.252.206" = [
+        "api.spotify.com"
+        "xpui.app.spotify.com"
+        "appresolve.spotify.com"
+        "login5.spotify.com"
+        "login.app.spotify.com"
+        "encore.scdn.co"
+        "ap-gew1.spotify.com"
+        "gew1-spclient.spotify.com"
+        "spclient.wg.spotify.com"
+        "api-partner.spotify.com"
+        "aet.spotify.com"
+        "www.spotify.com"
+        "accounts.spotify.com"
+        "open.spotify.com"
+        "api.spotify.com"
+        "xpui.app.spotify.com"
+        "appresolve.spotify.com"
+        "login5.spotify.com"
+        "login.app.spotify.com"
+        "encore.scdn.co"
+        "ap-gew1.spotify.com"
+        "gew1-spclient.spotify.com"
+        "spclient.wg.spotify.com"
+        "api-partner.spotify.com"
+        "aet.spotify.com"
+        "www.spotify.com"
+        "accounts.spotify.com"
+        "encore.scdn.co"
+        "api.spotify.com"
+        "xpui.app.spotify.com"
+        "appresolve.spotify.com"
+        "login5.spotify.com"
+        "login.app.spotify.com"
+        "encore.scdn.co"
+        "ap-gew1.spotify.com"
+        "gew1-spclient.spotify.com"
+        "spclient.wg.spotify.com"
+        "api-partner.spotify.com"
+        "aet.spotify.com"
+        "www.spotify.com"
+        "accounts.spotify.com"
+        "open.spotify.com"
+      ];
+      # GTA Online fix
       "0.0.0.0" = [
         "paradise-s1.battleye.com"
         "test-s1.battleye.com"
         "paradiseenhanced-s1.battleye.com"
       ];
+
+      # Spotify second fix (in case first breaks)
+      # "185.246.223.127" = [
+      #  "api.spotify.com"
+      #  "xpui.app.spotify.com"
+      #  "appresolve.spotify.com"
+      #  "login5.spotify.com"
+      #  "login.app.spotify.com"
+      #  "encore.scdn.co"
+      #  "ap-gew1.spotify.com"
+      #  "gew1-spclient.spotify.com"
+      #  "spclient.wg.spotify.com"
+      #  "api-partner.spotify.com"
+      #  "aet.spotify.com"
+      #  "www.spotify.com"
+      #  "accounts.spotify.com"
+      #  "open.spotify.com"
+      #  "api.spotify.com"
+      #  "xpui.app.spotify.com"
+      #  "appresolve.spotify.com"
+      #  "login5.spotify.com"
+      #  "login.app.spotify.com"
+      #  "encore.scdn.co"
+      #  "ap-gew1.spotify.com"
+      #  "gew1-spclient.spotify.com"
+      #  "spclient.wg.spotify.com"
+      #  "api-partner.spotify.com"
+      #  "aet.spotify.com"
+      #  "www.spotify.com"
+      #  "accounts.spotify.com"
+      #  "encore.scdn.co"
+      #  "api.spotify.com"
+      #  "xpui.app.spotify.com"
+      #  "appresolve.spotify.com"
+      #  "login5.spotify.com"
+      #  "login.app.spotify.com"
+      #  "encore.scdn.co"
+      #  "ap-gew1.spotify.com"
+      #  "gew1-spclient.spotify.com"
+      #  "spclient.wg.spotify.com"
+      #  "api-partner.spotify.com"
+      #  "aet.spotify.com"
+      #  "www.spotify.com"
+      #  "accounts.spotify.com"
+      #  "open.spotify.com"
+      #];
     };
   };
 
@@ -366,5 +460,4 @@
 
   nixpkgs.config.allowUnfree = true;
   system.stateVersion = "25.11";
-
 }
