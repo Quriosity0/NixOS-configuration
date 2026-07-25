@@ -20,7 +20,7 @@
         resolution = "1920x1080";
         maxGenerations = 10;
         style = {
-          wallpapers = [ pkgs.nixos-artwork.wallpapers.gear ];
+          wallpapers = [ pkgs.nixos-artwork.wallpapers.gear.kdeFilePath ];
           interface = {
             branding = "NixOS";
           };
@@ -224,17 +224,20 @@
   };
 
   # fonts
-  fonts.packages = with pkgs; [
-    freetype
-    fontconfig
-    dejavu_fonts
-    nerd-fonts.jetbrains-mono
-    nerd-fonts.ubuntu
-    nerd-fonts.ubuntu-mono
-    (google-fonts.override {
-      fonts = [ "MontserratAlternates" ];
-    })
-  ];
+  fonts = {
+    packages = with pkgs; [
+      freetype
+      fontconfig
+      dejavu_fonts
+      nerd-fonts.jetbrains-mono
+      nerd-fonts.ubuntu
+      nerd-fonts.ubuntu-mono
+      (google-fonts.override {
+        fonts = [ "MontserratAlternates" ];
+      })
+    ];
+    fontconfig.useEmbeddedBitmaps = true;
+  };
 
   # exclude useless kde apps
   environment.plasma6.excludePackages = with pkgs; [
@@ -261,7 +264,7 @@
             qtsvg
             qtdeclarative
             qt5compat
-          ]) ++ [ (pkgs.callPackage ./modules/echo-sddm.nix {}) ];
+          ]) ++ [ (pkgs.callPackage ./modules/echo-sddm.nix {}) ]; # switch to nur.repos.quriosity.echo-sddm when pr will be approved
       };
     };
     desktopManager.plasma6.enable = true;
@@ -353,7 +356,7 @@
         "www.openai.com"
       ];
       # Spotify rufix
-      "63.141.252.206" = [
+       "185.246.223.127" = [
         "api.spotify.com"
         "xpui.app.spotify.com"
         "appresolve.spotify.com"
@@ -403,52 +406,6 @@
         "test-s1.battleye.com"
         "paradiseenhanced-s1.battleye.com"
       ];
-
-      # Spotify second fix (in case first breaks)
-      # "185.246.223.127" = [
-      #  "api.spotify.com"
-      #  "xpui.app.spotify.com"
-      #  "appresolve.spotify.com"
-      #  "login5.spotify.com"
-      #  "login.app.spotify.com"
-      #  "encore.scdn.co"
-      #  "ap-gew1.spotify.com"
-      #  "gew1-spclient.spotify.com"
-      #  "spclient.wg.spotify.com"
-      #  "api-partner.spotify.com"
-      #  "aet.spotify.com"
-      #  "www.spotify.com"
-      #  "accounts.spotify.com"
-      #  "open.spotify.com"
-      #  "api.spotify.com"
-      #  "xpui.app.spotify.com"
-      #  "appresolve.spotify.com"
-      #  "login5.spotify.com"
-      #  "login.app.spotify.com"
-      #  "encore.scdn.co"
-      #  "ap-gew1.spotify.com"
-      #  "gew1-spclient.spotify.com"
-      #  "spclient.wg.spotify.com"
-      #  "api-partner.spotify.com"
-      #  "aet.spotify.com"
-      #  "www.spotify.com"
-      #  "accounts.spotify.com"
-      #  "encore.scdn.co"
-      #  "api.spotify.com"
-      #  "xpui.app.spotify.com"
-      #  "appresolve.spotify.com"
-      #  "login5.spotify.com"
-      #  "login.app.spotify.com"
-      #  "encore.scdn.co"
-      #  "ap-gew1.spotify.com"
-      #  "gew1-spclient.spotify.com"
-      #  "spclient.wg.spotify.com"
-      #  "api-partner.spotify.com"
-      #  "aet.spotify.com"
-      #  "www.spotify.com"
-      #  "accounts.spotify.com"
-      #  "open.spotify.com"
-      #];
     };
   };
 

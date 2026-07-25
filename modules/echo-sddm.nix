@@ -18,7 +18,7 @@ stdenvNoCC.mkDerivation {
     mkdir -p $out/share/sddm/themes/echo
     cp -r Main.qml metadata.desktop theme.conf install.sh LICENSE assets \
       $out/share/sddm/themes/echo/
-      echo "QtVersion=6" >> $out/share/sddm/themes/echo/metadata.desktop
+    echo "QtVersion=6" >> $out/share/sddm/themes/echo/metadata.desktop
     runHook postInstall
   '';
 
