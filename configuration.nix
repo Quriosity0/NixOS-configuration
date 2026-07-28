@@ -96,7 +96,6 @@
 
   # Package installation
   environment.systemPackages = with pkgs; [
-    vim
     wget
     curl
     git
@@ -107,12 +106,12 @@
     home-manager
     podman-compose
     podman-tui
-    steam-run
+    github-cli
 
     firefox
-    #hyper # package broken??? Fuhhh
     flameshot
     zenity
+    #nur.repos.quriosity tabby/hyper
     nur.repos.quriosity.echo-sddm
   ];
 
@@ -125,9 +124,7 @@
       protontricks.enable = true;
       package = pkgs.millennium-steam.override {
         extraPkgs = pkgs: with pkgs; [
-          freetype fontconfig
-          libXcursor libXi libXinerama libXScrnSaver
-          libpng libpulseaudio
+          freetype fontconfig libXcursor libXi libXinerama libXScrnSaver libpng libpulseaudio
         ];
       };
     };
@@ -188,12 +185,16 @@
         "HIST_IGNORE_ALL_DUPS"
       ];
     };
+    neovim = {
+      enable = true;
+      viAlias = true;
+      vimAlias = true;
+    };
     gnupg.agent = {
       enable = true;
       enableSSHSupport = true;
     };
     amnezia-vpn.enable = true;
-    coolercontrol.enable = true;
     mtr.enable = true;
   };
 
@@ -264,7 +265,6 @@
     };
     desktopManager.plasma6.enable = true;
     flatpak.enable = true;
-    zerotierone.enable = true;
   };
 
   nix = {
