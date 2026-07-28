@@ -23,7 +23,6 @@
     droidcam
     tor-browser
     gitkraken
-    haguichi
     faugus-launcher
     vmware-workstation
     materialgram
@@ -32,9 +31,12 @@
     zed-editor
     keepassxc
     xnviewmp
+    distrobox
+    distrobox-tui
+    kontainer
 
     nur.repos.trev.helium
-    #nur.repos.quriosity.zen-browser # not in the NUR at the moment of commit
+    nur.repos.quriosity.zen-browser
 
     kdePackages.sddm-kcm
     kdePackages.partitionmanager
