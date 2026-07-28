@@ -71,8 +71,6 @@
   # ---------------------------------------- HARDWARE DRIVERS ----------------------------------------------
   # --------------------------------------------------------------------------------------------------------
 
-  services.xserver.videoDrivers = ["nvidia"];
-
   hardware = {
     graphics = {
       enable = true;
@@ -250,6 +248,7 @@
         layout = "us";
         variant = "";
       };
+      videoDrivers = ["nvidia"];
     };
     displayManager = {
       sddm = {
