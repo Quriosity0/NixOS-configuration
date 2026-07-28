@@ -14,10 +14,9 @@
     (prismlauncher.override {
       additionalPrograms = [ ffmpeg ];
       jdks = [
-        zulu8
-        zulu17
-        zulu25
-        zulu
+        temurin-bin-8
+        temurin-bin-17
+        temurin-bin-25
       ];
     })
     droidcam
@@ -29,7 +28,6 @@
     hardinfo2
     vlc
     zed-editor
-    keepassxc
     xnviewmp
     distrobox
     distrobox-tui
@@ -37,9 +35,8 @@
 
     nur.repos.trev.helium
     nur.repos.quriosity.zen-browser
+    nur.repos.quriosity.BedrockNix
 
-    kdePackages.sddm-kcm
-    kdePackages.partitionmanager
     kdePackages.ktorrent
     kdePackages.qtstyleplugin-kvantum
     kdePackages.kdenlive
