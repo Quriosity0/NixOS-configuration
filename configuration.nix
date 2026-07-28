@@ -38,14 +38,6 @@
     tmp.cleanOnBoot = true;
   };
 
-  security.polkit.enable = true;
-
-  networking.hostName = "asuspc";
-
-  time.timeZone = "Europe/Moscow";
-
-  system.nixos.label = "NixOS";
-
   i18n = {
     defaultLocale = "en_US.UTF-8";
     extraLocaleSettings = {
@@ -61,11 +53,6 @@
     };
   };
 
-  services.xserver.xkb = {
-    layout = "us";
-    variant = "";
-  };
-
   users.users = {
     quriosity = {
       isNormalUser = true;
@@ -75,8 +62,13 @@
     };
   };
 
+  security.polkit.enable = true;
+  networking.hostName = "asuspc";
+  time.timeZone = "Europe/Moscow";
+  system.nixos.label = "NixOS";
+
   # --------------------------------------------------------------------------------------------------------
-  # ------------------------------------------ NVIDIA DRIVER -----------------------------------------------
+  # ---------------------------------------- HARDWARE DRIVERS ----------------------------------------------
   # --------------------------------------------------------------------------------------------------------
 
   services.xserver.videoDrivers = ["nvidia"];
@@ -99,7 +91,6 @@
     };
     nvidia-container-toolkit.enable = true;
   };
-
 
   # --------------------------------------------------------------------------------------------------------
   # -------------------------------------------- PACKAGES --------------------------------------------------
@@ -237,24 +228,9 @@
         fonts = [ "MontserratAlternates" ];
       })
     ];
-    fontconfig = {
-        useEmbeddedBitmaps = true;   # оставляем, для рендеринга не помешает
-        localConf = ''
-          <?xml version="1.0"?>
-          <!DOCTYPE fontconfig SYSTEM "fonts.dtd">
-          <fontconfig>
-            <match target="scan">
-              <test name="family"><string>Noto Color Emoji</string></test>
-              <edit name="embeddedbitmap" mode="assign">
-                <bool>true</bool>
-              </edit>
-            </match>
-          </fontconfig>
-        '';
-      };
-    };
+  };
 
-  # exclude useless kde apps
+  # exclude kde apps
   environment.plasma6.excludePackages = with pkgs; [
     kdePackages.elisa
     kdePackages.spectacle
@@ -269,12 +245,17 @@
   # --------------------------------------------------------------------------------------------------------
 
   services = {
+    xserver ={
+      xkb = {
+        layout = "us";
+        variant = "";
+      };
+    };
     displayManager = {
       sddm = {
         enable = true;
         wayland.enable = true;
         theme = "echo";
-        # package = pkgs.kdePackages.sddm;
         extraPackages = (with pkgs.qt6; [
             qtsvg
             qtdeclarative
@@ -423,8 +404,6 @@
       ];
     };
   };
-
-  # networking.firewall.enable = false;
 
   # --------------------------------------------------------------------------------------------------------
   # ------------------------------------------ DO NOT TOUCH ------------------------------------------------
