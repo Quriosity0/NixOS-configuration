@@ -56,7 +56,7 @@
         inherit system;
         specialArgs = { inherit inputs; };
         modules = [
-          { nixpkgs.overlays = [ millennium.overlays.default ]; }
+          { nixpkgs.overlays = [ millennium.overlays.default nur.overlays.default ]; }
           proxy-suite.nixosModules.default
           ./configuration.nix
           ./modules/proxy-suite.nix

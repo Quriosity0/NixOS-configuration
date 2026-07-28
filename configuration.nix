@@ -118,12 +118,13 @@
     home-manager
     podman-compose
     podman-tui
+    steam-run
 
     firefox
     #hyper # package broken??? Fuhhh
     flameshot
     zenity
-    (pkgs.callPackage ./modules/echo-sddm.nix {}) # switch to nur.repos.quriosity.echo-sddm when pr will be approved
+    nur.repos.quriosity.echo-sddm
   ];
 
   # Package settings
@@ -188,8 +189,8 @@
       shellAliases = {
         la = "ls -la";
         cls = "clear";
-        nfl = "nix flake update";
-        nfc = "nix flake check";
+        flupd = "nix flake update";
+        flchk = "nix flake check";
         update = "sudo nixos-rebuild switch --flake ~/nixconf#asuspc && home-manager switch --flake ~/nixconf#quriosity";
       };
       histSize = 10000;
@@ -264,7 +265,7 @@
             qtsvg
             qtdeclarative
             qt5compat
-          ]) ++ [ (pkgs.callPackage ./modules/echo-sddm.nix {}) ]; # switch to nur.repos.quriosity.echo-sddm when pr will be approved
+          ]) ++ [ pkgs.nur.repos.quriosity.echo-sddm ];
       };
     };
     desktopManager.plasma6.enable = true;
