@@ -237,8 +237,22 @@
         fonts = [ "MontserratAlternates" ];
       })
     ];
-    fontconfig.useEmbeddedBitmaps = true;
-  };
+    fontconfig = {
+        useEmbeddedBitmaps = true;   # оставляем, для рендеринга не помешает
+        localConf = ''
+          <?xml version="1.0"?>
+          <!DOCTYPE fontconfig SYSTEM "fonts.dtd">
+          <fontconfig>
+            <match target="scan">
+              <test name="family"><string>Noto Color Emoji</string></test>
+              <edit name="embeddedbitmap" mode="assign">
+                <bool>true</bool>
+              </edit>
+            </match>
+          </fontconfig>
+        '';
+      };
+    };
 
   # exclude useless kde apps
   environment.plasma6.excludePackages = with pkgs; [
