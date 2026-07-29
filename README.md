@@ -12,39 +12,36 @@ My personal configuration files for **NixOS** Linux (system + Home manager, buil
 - [NixOS](https://nixos.org/) ***unstable*** with flakes enabled
 - [home-manager](https://github.com/nix-community/home-manager)
 
-## Installation and updating
+## Installation and updating (UNSTABLE)
+
+> ### **NOTE:**
+
+> **Nix Flakes** is an experimental feature. To enable flakes, when rebuilding system add `--experimental-features 'nix-command flakes'` flag
+
+> Unfree repository is **disabled** by default. To allow NixOS unfree packages, use `NIXPKGS_ALLOW_UNFREE=1`
+
+> This repository is tested only on **official NixOS Unstable channel**! Any other channel may cause bugs or build errors! 
 
 ### Installing
 
-Clone the repo:
-
 ```bash
 git clone https://github.com/Quriosity0/nixconf.git ~/nixconf
+sudo nix-channel --add https://channels.nixos.org/nixos-unstable nixos
+sudo nix-channel --update
+NIXPKGS_ALLOW_UNFREE=1 sudo nixos-rebuild switch --flake /path/to/nixconf#asuspc --experimental-features 'nix-command flakes'
+sudo reboot
 ```
 
-Apply system and Home manager configuration:
+After reboot you can update your system and home-manager configuration with one command
 
 ```bash
-sudo nixos-rebuild switch --flake ~/nixconf#asuspc
-home-manager switch --flake ~/nixconf#quriosity
+update
 ```
 
-If needed, clean old all generations:
+If needed, clean every old generation:
 
 ```bash
 sudo nix-collect-garbage -d
-```
-
-### NOTE!
-
-Nix Flakes is an experimental feature. To enable flakes, when rebuilding system add `--experimental-features 'nix-command flakes'` flag. 
-
-Unfree repository is disabled by default. To allow NixOS unfree packages, use NIXPKGS_ALLOW_UNFREE=1. 
-
-Final command should look something like this
-
-```nix
-NIXPKGS_ALLOW_UNFREE=1 sudo nixos-rebuild switch --flake /path/to/nixconf#asuspc --experimental-features 'nix-command flakes'
 ```
 
 ### Updating
@@ -53,31 +50,10 @@ When you want to update config to the latest commit, just do the pull inside the
 
 ```bash
 git pull
-sudo nixos-rebuild switch --flake ~/nixconf#asuspc
-home-manager switch --flake ~/nixconf#quriosity
+update
 ```
 
-> **NOTE:** `asuspc` & `quriosity` — names of my PC and profile, given in every configuration file in this repo. If you change them on your machine, then change them in this command
-
-## Credits
-
-**Thank you all for excelent work**
-
-### flakes and their authors
-
-[Nix by Eelco Dolstra](https://nixos.org/)
-
-[Home manager by nix community](https://github.com/nix-community/home-manager)
-
-[Millennium by Ethan Alexander(shdwmtr)](https://steambrew.app/)
-
-[Spicetify-Nix by Gerg-L, the-argus and pietdevries94](https://github.com/Gerg-L/spicetify-nix)
-
-[Hush by UMCEKO](https://github.com/UMCEKO/hush)
-
-[nixcord by 4evy](https://github.com/4evy/nixcord)
-
-[proxy-suite by FUFSoB](https://github.com/FUFSoB/proxy-suite-flake)
+> **NOTE:** `asuspc` & `quriosity` — names of my PC and profile, given in every configuration file in this repo. If you change them on your machine, then change them in command alias
 
 ## Licnese
 
