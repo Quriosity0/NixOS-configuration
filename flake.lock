@@ -60,11 +60,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1785276942,
-        "narHash": "sha256-R5fsJypG+x5v3nhZx7wZwb8wwvuCvrL7/mMqG9YYGP4=",
+        "lastModified": 1785306346,
+        "narHash": "sha256-DScBkW0fOgpGPK2trNoX3ryLTlaC14+gglFo/BhGJ4g=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "a14065d14edbb0d0bccf9c70e0c9cfcda5f1771d",
+        "rev": "e705714e918c3b11affcdd15db2cbe3a070420a0",
         "type": "github"
       },
       "original": {
@@ -139,11 +139,11 @@
         "nixpkgs-nixcord": "nixpkgs-nixcord"
       },
       "locked": {
-        "lastModified": 1785270857,
-        "narHash": "sha256-PAZv1wI/QGQVx+TkRyrcZumu4ehXAblvw6Vo8jLVIls=",
+        "lastModified": 1785318427,
+        "narHash": "sha256-1TvB1STUXQTTkHU+z8Oaj3/KOHKrrL/RVmOJ6A/VZ7s=",
         "owner": "4evy",
         "repo": "nixcord",
-        "rev": "5fbabc42ef944c2eb3197577b6b4d36412020fee",
+        "rev": "008a81bba2f3eb2a853b5c2caec39850946ca6a8",
         "type": "github"
       },
       "original": {
@@ -252,11 +252,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1785279808,
-        "narHash": "sha256-0q99jP7KavqEMEJFXjLBnvr3dK34vFkLffn0iKfnBeU=",
+        "lastModified": 1785345989,
+        "narHash": "sha256-Gt7us48iPYPW9kf3W3oOrlcMDVBgRxqCgIwXtSDCa6U=",
         "owner": "nix-community",
         "repo": "NUR",
-        "rev": "75346e0a78e40e9085f8cbd0ca0a5edb2fb50aa2",
+        "rev": "672834e75706853e3fc94545e9dfb3436ae5de92",
         "type": "github"
       },
       "original": {
@@ -341,15 +341,15 @@
         "zapret-flowseal": "zapret-flowseal"
       },
       "locked": {
-        "lastModified": 1784487101,
-        "narHash": "sha256-5rAuYzmK2jsHIIHVbzi99lzfCgq7QKtv72FZjGbMezg=",
-        "owner": "egwuregwu",
+        "lastModified": 1784758289,
+        "narHash": "sha256-gUwiD33Dn5Q4Fi3RwbRmJJ7wiRw19rvyFJBBnhHWMQc=",
+        "owner": "kartavkun",
         "repo": "zapret-discord-youtube",
-        "rev": "27efbcfcd3f8fbe4275505bdb4c4898077086ed4",
+        "rev": "a7d7f1dd3765937b051d1289fba3fde2a6c8c7c0",
         "type": "github"
       },
       "original": {
-        "owner": "egwuregwu",
+        "owner": "kartavkun",
         "repo": "zapret-discord-youtube",
         "type": "github"
       }
