@@ -17,6 +17,7 @@
     loader = {
       limine = {
         enable = true;
+        efiInstallAsRemovable = true;
         resolution = "1920x1080";
         maxGenerations = 10;
         style = {
@@ -174,7 +175,7 @@
       shellAliases = {
         la = "ls -la";
         cls = "clear";
-        flupd = "nix flake update";
+        flpull = "nix flake update";
         flchk = "nix flake check";
         update = "sudo nixos-rebuild switch --flake ~/nixconf#asuspc && home-manager switch --flake ~/nixconf#quriosity";
       };
@@ -348,51 +349,6 @@
         "webrtc.chatgpt.com"
         "www.chatgpt.com"
         "www.openai.com"
-      ];
-      # Spotify rufix
-       "185.246.223.127" = [
-        "api.spotify.com"
-        "xpui.app.spotify.com"
-        "appresolve.spotify.com"
-        "login5.spotify.com"
-        "login.app.spotify.com"
-        "encore.scdn.co"
-        "ap-gew1.spotify.com"
-        "gew1-spclient.spotify.com"
-        "spclient.wg.spotify.com"
-        "api-partner.spotify.com"
-        "aet.spotify.com"
-        "www.spotify.com"
-        "accounts.spotify.com"
-        "open.spotify.com"
-        "api.spotify.com"
-        "xpui.app.spotify.com"
-        "appresolve.spotify.com"
-        "login5.spotify.com"
-        "login.app.spotify.com"
-        "encore.scdn.co"
-        "ap-gew1.spotify.com"
-        "gew1-spclient.spotify.com"
-        "spclient.wg.spotify.com"
-        "api-partner.spotify.com"
-        "aet.spotify.com"
-        "www.spotify.com"
-        "accounts.spotify.com"
-        "encore.scdn.co"
-        "api.spotify.com"
-        "xpui.app.spotify.com"
-        "appresolve.spotify.com"
-        "login5.spotify.com"
-        "login.app.spotify.com"
-        "encore.scdn.co"
-        "ap-gew1.spotify.com"
-        "gew1-spclient.spotify.com"
-        "spclient.wg.spotify.com"
-        "api-partner.spotify.com"
-        "aet.spotify.com"
-        "www.spotify.com"
-        "accounts.spotify.com"
-        "open.spotify.com"
       ];
       # GTA Online fix
       "0.0.0.0" = [
