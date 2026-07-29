@@ -20,7 +20,6 @@
       ];
     })
     droidcam
-    tor-browser
     gitkraken
     faugus-launcher
     vmware-workstation

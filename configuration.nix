@@ -108,7 +108,6 @@
     podman-tui
     github-cli
 
-    firefox
     flameshot
     zenity
     #nur.repos.quriosity tabby/hyper
