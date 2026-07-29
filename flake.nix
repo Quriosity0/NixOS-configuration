@@ -13,7 +13,7 @@
       inputs = {
         nixpkgs.follows = "nixpkgs";
         zapret = {
-          url = "github:egwuregwu/zapret-discord-youtube";
+          url = "github:kartavkun/zapret-discord-youtube";
           inputs.zapret-flowseal.url = "github:Flowseal/zapret-discord-youtube";
         };
       };
