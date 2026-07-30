@@ -80,8 +80,8 @@
       modesetting.enable = true;
       powerManagement.enable = false;
       powerManagement.finegrained = false;
-      open = false;
-      nvidiaSettings = true;
+      open = true;
+      nvidiaSettings = false;
       package = config.boot.kernelPackages.nvidiaPackages.latest;
     };
     openrazer = {
@@ -223,7 +223,6 @@
       fontconfig
       dejavu_fonts
       nerd-fonts.jetbrains-mono
-      nerd-fonts.ubuntu
       nerd-fonts.ubuntu-mono
       (google-fonts.override {
         fonts = [ "MontserratAlternates" ];
