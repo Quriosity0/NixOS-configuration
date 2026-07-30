@@ -84,7 +84,10 @@
         globalBadges.enable = true;
         hideMedia.enable = true;
         homeTyping.enable = true;
-        fixSpotifyEmbeds = true;
+        fixSpotifyEmbeds = {
+          enable = true;
+          volume = 10.0;
+        };
         SpotifyCrack = true;
         ignoreCalls.enable = true;
         iLoveSpam.enable = true;
