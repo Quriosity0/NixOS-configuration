@@ -41,7 +41,7 @@ update
 If needed, clean every old generation:
 
 ```bash
-sudo nix-collect-garbage -d
+clean-gens
 ```
 
 ### Updating
