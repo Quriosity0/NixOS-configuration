@@ -88,7 +88,9 @@
           enable = true;
           volume = 10.0;
         };
-        spotifyCrack = true;
+        spotifyCrack = {
+          enable = true;
+        };
         ignoreCalls.enable = true;
         iLoveSpam.enable = true;
         imageZoom = {
