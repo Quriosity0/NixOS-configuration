@@ -84,7 +84,7 @@
         globalBadges.enable = true;
         hideMedia.enable = true;
         homeTyping.enable = true;
-        FixSpotifyEmbeds = true;
+        fixSpotifyEmbeds = true;
         SpotifyCrack = true;
         ignoreCalls.enable = true;
         iLoveSpam.enable = true;
