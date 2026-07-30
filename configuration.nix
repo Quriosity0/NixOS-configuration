@@ -179,7 +179,7 @@
         flchk = "nix flake check";
         update = "sudo nixos-rebuild switch --flake ~/nixconf#asuspc && home-manager switch --flake ~/nixconf#quriosity";
         clean-gens = "sudo nix-collect-garbage -d";
-        sudo = "run0";
+        #sudo = "run0";
       };
       histSize = 10000;
       histFile = "$HOME/.zsh_history";
