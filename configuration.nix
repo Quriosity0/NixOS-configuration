@@ -111,7 +111,7 @@
 
     flameshot
     zenity
-    #nur.repos.quriosity tabby/hyper
+    nur.repos.quriosity.tabby
     nur.repos.quriosity.echo-sddm
   ];
 
@@ -235,7 +235,7 @@
     kdePackages.spectacle
     kdePackages.qrca
     kdePackages.gwenview
-    #kdePackages.konsole # remove comment and switch to other terminal emulator
+    kdePackages.konsole
   ];
 
   # --------------------------------------------------------------------------------------------------------
