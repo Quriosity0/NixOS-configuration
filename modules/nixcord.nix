@@ -84,6 +84,8 @@
         globalBadges.enable = true;
         hideMedia.enable = true;
         homeTyping.enable = true;
+        FixSpotifyEmbeds = true;
+        SpotifyCrack = true;
         ignoreCalls.enable = true;
         iLoveSpam.enable = true;
         imageZoom = {
@@ -166,7 +168,6 @@
         showTimeoutDuration.enable = true;
         silentMessageToggle.enable = true;
         sortFriends.enable = true;
-        spotifyActivityToggle.enable = true;
         streamerModeOnStream.enable = true;
         themeLibrary = {
           enable = true;
@@ -278,9 +279,6 @@
           inReplies = false;
           showGradient = false;
           userProfilePopout = false;
-        };
-        spotifyActivityToggle = {
-          spotifyConnection = true;
         };
         SpotifyLyrics = {
           LyricsPosition = "below";
