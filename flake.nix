@@ -12,10 +12,6 @@
       url = "github:FUFSoB/proxy-suite-flake";
       inputs = {
         nixpkgs.follows = "nixpkgs";
-        zapret = {
-          url = "github:kartavkun/zapret-discord-youtube";
-          inputs.zapret-flowseal.url = "github:Flowseal/zapret-discord-youtube";
-        };
       };
     };
     nixcord = {
