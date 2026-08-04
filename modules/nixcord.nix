@@ -71,7 +71,6 @@
         f8Break.enable = true;
         fakeNitro.enable = true;
         fastDeleteChannels.enable = true;
-        favoriteGifSearch.enable = true;
         findReply.enable = true;
         fixFileExtensions.enable = true;
         fixImagesQuality.enable = true;
