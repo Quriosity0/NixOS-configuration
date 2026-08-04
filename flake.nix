@@ -1,5 +1,5 @@
 {
-  description = "Home Manager configuration of quriosity";
+  description = "Qurioisty's configuration flake";
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
@@ -54,6 +54,7 @@
         modules = [
           { nixpkgs.overlays = [ millennium.overlays.default nur.overlays.default ]; }
           proxy-suite.nixosModules.default
+          { imports = builtins.attrValues nur.legacyPackages.${system}.repos.quriosity.nixosModules; }
           ./configuration.nix
           ./modules/proxy-suite.nix
         ];
