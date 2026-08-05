@@ -132,8 +132,6 @@
     };
     nix-ld = {
       enable = true;
-      # libraries = with pkgs; [
-      # ];
     };
     zsh = {
       enable = true;
