@@ -111,7 +111,6 @@
     flameshot
     zenity
     nur.repos.quriosity.tabby
-    nur.repos.quriosity.echo-sddm
   ];
 
   # Package settings
@@ -178,6 +177,12 @@
     mtr.enable = true;
   };
 
+  quriosity = {
+    sddm-themes = {
+      enable = true;
+    };
+  };
+
   # Virtualisation (podman/docker and virtual machines)
   virtualisation = {
     containers = {
@@ -239,7 +244,7 @@
             qtsvg
             qtdeclarative
             qt5compat
-          ]) ++ [ pkgs.nur.repos.quriosity.echo-sddm ];
+          ]);
       };
     };
     desktopManager.plasma6.enable = true;
