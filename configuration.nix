@@ -177,7 +177,9 @@
 
   quriosity = {
     sddm-themes = {
-      enable = true;
+      echo = {
+        enable = true;
+      };
     };
   };
 
