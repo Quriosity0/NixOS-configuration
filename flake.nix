@@ -25,7 +25,6 @@
 
     spicetify-nix.url = "github:Gerg-L/spicetify-nix";
     millennium.url = "github:SteamClientHomebrew/Millennium?dir=packages/nix";
-    # hush.url = "github:UMCEKO/hush";
   };
 
   outputs = inputs@{ nixpkgs, home-manager, millennium, proxy-suite, nixcord, nur, ... }:
