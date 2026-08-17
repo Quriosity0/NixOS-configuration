@@ -76,30 +76,28 @@
     };
 
     dconf = {
-        enable = true;
-        settings = {
-          "org/gnome/shell" = {
-            # disable-user-extensions = true; # Optionally disable user extensions entirely
-            enabled-extensions = [
-              gnomeExtensions.blur-my-shell.extensionUuid
-              gnomeExtensions.dash2dock-lite.extensionUuid
-              gnomeExtensions.just-perfection.extensionUuid
-              gnomeExtensions.clipboard-indicator.extensionUuid
-              gnomeExtensions.app-hider.extensionUuid
-              gnomeExtensions.rounded-window-corners-reborn.extensionUuid
-              gnomeExtensions.caffeine.extensionUuid
-              gnomeExtensions.tiling-shell.extensionUuid
-              gnomeExtensions.tray-toggle.extensionUuid
-              gnomeExtensions.media-controls.extensionUuid
-              gnomeExtensions.user-themes.extensionUuid
-            ];
-          };
-          # Configure individual extensions
-          #"org/gnome/shell/extensions/blur-my-shell" = {
-          #  brightness = 0.75;
-          #  noise-amount = 0;
-          };
+      enable = true;
+      settings = {
+        "org/gnome/shell" = {
+          # disable-user-extensions = true; # Optionally disable user extensions entirely
+          enabled-extensions = [
+            gnomeExtensions.blur-my-shell.extensionUuid
+            gnomeExtensions.dash2dock-lite.extensionUuid
+            gnomeExtensions.just-perfection.extensionUuid
+            gnomeExtensions.clipboard-indicator.extensionUuid
+            gnomeExtensions.app-hider.extensionUuid
+            gnomeExtensions.rounded-window-corners-reborn.extensionUuid
+            gnomeExtensions.caffeine.extensionUuid
+            gnomeExtensions.tiling-shell.extensionUuid
+            gnomeExtensions.tray-toggle.extensionUuid
+            gnomeExtensions.media-controls.extensionUuid
+            gnomeExtensions.user-themes.extensionUuid
+          ];
         };
+        # Configure individual extensions
+        #"org/gnome/shell/extensions/blur-my-shell" = {
+        #  brightness = 0.75;
+        #  noise-amount = 0;
       };
     };
   };
