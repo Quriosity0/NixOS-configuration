@@ -38,7 +38,6 @@
     transmission_4
     qt6Packages.qtstyleplugin-kvantum
     kdePackages.kdenlive
-    bazaar
 
     gnome-tweaks
     refine
