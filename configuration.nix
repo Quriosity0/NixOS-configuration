@@ -215,13 +215,6 @@
   };
 
   # exclude kde apps
-  environment.plasma6.excludePackages = with pkgs; [
-    kdePackages.elisa
-    kdePackages.spectacle
-    kdePackages.qrca
-    kdePackages.gwenview
-    kdePackages.konsole
-  ];
 
   environment.gnome.excludePackages = with pkgs; [ gnome-tour gnome-user-docs ];
 
@@ -250,7 +243,6 @@
           ]);
       };
     };
-    desktopManager.plasma6.enable = true;
     desktopManager.gnome.enable = true;
     gnome = {
       core-developer-tools.enable = false;
