@@ -29,7 +29,7 @@
     xnviewmp
     distrobox
     distrobox-tui
-    kontainer
+    boxbuddy
 
     nur.repos.trev.helium
     nur.repos.quriosity.zen-browser
