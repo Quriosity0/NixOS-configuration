@@ -38,6 +38,20 @@
     kdePackages.ktorrent
     kdePackages.qtstyleplugin-kvantum
     kdePackages.kdenlive
+
+    gnome-tweaks
+    refine
+    gnomeExtensions.blur-my-shell
+    gnomeExtensions.dash2dock-lite
+    gnomeExtensions.just-perfection
+    gnomeExtensions.clipboard-indicator
+    gnomeExtensions.app-hider
+    gnomeExtensions.rounded-window-corners-reborn
+    gnomeExtensions.caffeine
+    gnomeExtensions.tiling-shell
+    gnomeExtensions.tray-toggle
+    gnomeExtensions.media-controls
+    gnomeExtensions.user-themes
   ];
 
   # OBS
