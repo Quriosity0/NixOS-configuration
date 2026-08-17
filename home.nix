@@ -81,17 +81,17 @@
         "org/gnome/shell" = {
           # disable-user-extensions = true; # Optionally disable user extensions entirely
           enabled-extensions = [
-            gnomeExtensions.blur-my-shell.extensionUuid
-            gnomeExtensions.dash2dock-lite.extensionUuid
-            gnomeExtensions.just-perfection.extensionUuid
-            gnomeExtensions.clipboard-indicator.extensionUuid
-            gnomeExtensions.app-hider.extensionUuid
-            gnomeExtensions.rounded-window-corners-reborn.extensionUuid
-            gnomeExtensions.caffeine.extensionUuid
-            gnomeExtensions.tiling-shell.extensionUuid
-            gnomeExtensions.tray-toggle.extensionUuid
-            gnomeExtensions.media-controls.extensionUuid
-            gnomeExtensions.user-themes.extensionUuid
+            pkgs.gnomeExtensions.blur-my-shell.extensionUuid
+            pkgs.gnomeExtensions.dash2dock-lite.extensionUuid
+            pkgs.gnomeExtensions.just-perfection.extensionUuid
+            pkgs.gnomeExtensions.clipboard-indicator.extensionUuid
+            pkgs.gnomeExtensions.app-hider.extensionUuid
+            pkgs.gnomeExtensions.rounded-window-corners-reborn.extensionUuid
+            pkgs.gnomeExtensions.caffeine.extensionUuid
+            pkgs.gnomeExtensions.tiling-shell.extensionUuid
+            pkgs.gnomeExtensions.tray-toggle.extensionUuid
+            pkgs.gnomeExtensions.media-controls.extensionUuid
+            pkgs.gnomeExtensions.user-themes.extensionUuid
           ];
         };
         # Configure individual extensions
