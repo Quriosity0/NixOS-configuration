@@ -222,6 +222,8 @@
     kdePackages.konsole
   ];
 
+  environment.gnome.excludePackages = with pkgs; [ gnome-tour gnome-user-docs ];
+
   # --------------------------------------------------------------------------------------------------------
   # -------------------------------------------- SERVICES --------------------------------------------------
   # --------------------------------------------  ENVVARS --------------------------------------------------
@@ -248,6 +250,11 @@
       };
     };
     desktopManager.plasma6.enable = true;
+    desktopManager.gnome.enable = true;
+    gnome = {
+      core-developer-tools.enable = false;
+      games.enable = false;
+    };
     flatpak.enable = true;
   };
 
