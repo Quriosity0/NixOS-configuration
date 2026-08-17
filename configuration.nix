@@ -21,7 +21,7 @@
         resolution = "1920x1080";
         maxGenerations = 10;
         style = {
-          wallpapers = [ pkgs.nixos-artwork.wallpapers.gear.kdeFilePath ];
+          wallpapers = [ pkgs.nixos-artwork.wallpapers.simple-dark-gray.kdeFilePath ];
           interface = {
             branding = "NixOS";
           };
