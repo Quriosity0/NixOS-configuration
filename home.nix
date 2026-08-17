@@ -19,7 +19,7 @@
       ];
     })
     droidcam
-    gitkraken
+    sourcegit
     faugus-launcher
     vmware-workstation
     materialgram
