@@ -173,6 +173,7 @@
     };
     amnezia-vpn.enable = true;
     mtr.enable = true;
+    gnome-terminal.enable = false;
   };
 
   quriosity = {
