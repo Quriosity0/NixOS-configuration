@@ -35,9 +35,10 @@
     nur.repos.quriosity.zen-browser
     nur.repos.quriosity.BedrockNix
 
-    kdePackages.ktorrent
-    kdePackages.qtstyleplugin-kvantum
+    transmission_4
+    qt6Packages.qtstyleplugin-kvantum
     kdePackages.kdenlive
+    bazaar
 
     gnome-tweaks
     refine
