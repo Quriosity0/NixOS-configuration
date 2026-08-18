@@ -173,7 +173,6 @@
     };
     amnezia-vpn.enable = true;
     mtr.enable = true;
-    gnome-terminal.enable = false;
   };
 
   quriosity = {
@@ -215,8 +214,25 @@
   };
 
   # exclude kde apps
-
-  environment.gnome.excludePackages = with pkgs; [ gnome-tour gnome-user-docs gnome-calendar gnome-characters gnome-contacts gnome-font-viewer gnome-maps gnome-music gnome-system-monitor gnome-weather loupe showtime simple-scan yelp snapshot decibels epiphany];
+  environment.gnome.excludePackages = with pkgs; [
+    gnome-tour
+    gnome-user-docs
+    gnome-calendar
+    gnome-characters
+    gnome-contacts
+    gnome-font-viewer
+    gnome-maps
+    gnome-music
+    gnome-system-monitor
+    gnome-weather
+    loupe
+    showtime
+    simple-scan
+    yelp
+    snapshot
+    decibels
+    epiphany
+  ];
 
   # --------------------------------------------------------------------------------------------------------
   # -------------------------------------------- SERVICES --------------------------------------------------
