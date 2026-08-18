@@ -35,7 +35,7 @@
     nur.repos.quriosity.zen-browser
     nur.repos.quriosity.BedrockNix
 
-    transmission_4
+    transmission_4-gtk
     qt6Packages.qtstyleplugin-kvantum
     kdePackages.kdenlive
 
