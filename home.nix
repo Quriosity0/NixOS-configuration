@@ -49,7 +49,7 @@
     gnomeExtensions.rounded-window-corners-reborn
     gnomeExtensions.caffeine
     gnomeExtensions.tiling-shell
-    gnomeExtensions.tray-toggle
+    gnomeExtensions.status-tray
     gnomeExtensions.media-controls
     gnomeExtensions.user-themes
   ];
@@ -90,7 +90,7 @@
           pkgs.gnomeExtensions.rounded-window-corners-reborn.extensionUuid
           pkgs.gnomeExtensions.caffeine.extensionUuid
           pkgs.gnomeExtensions.tiling-shell.extensionUuid
-          pkgs.gnomeExtensions.tray-toggle.extensionUuid
+          pkgs.gnomeExtensions.status-tray.extensionUuid
           pkgs.gnomeExtensions.media-controls.extensionUuid
           pkgs.gnomeExtensions.user-themes.extensionUuid
         ];
