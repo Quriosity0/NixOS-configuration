@@ -50,7 +50,6 @@
     gnomeExtensions.caffeine
     gnomeExtensions.tiling-shell
     gnomeExtensions.status-tray
-    gnomeExtensions.media-controls
     gnomeExtensions.user-themes
   ];
 
@@ -91,7 +90,6 @@
           pkgs.gnomeExtensions.caffeine.extensionUuid
           pkgs.gnomeExtensions.tiling-shell.extensionUuid
           pkgs.gnomeExtensions.status-tray.extensionUuid
-          pkgs.gnomeExtensions.media-controls.extensionUuid
           pkgs.gnomeExtensions.user-themes.extensionUuid
         ];
       };
