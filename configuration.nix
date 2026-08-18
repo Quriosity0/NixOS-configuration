@@ -214,12 +214,24 @@
   };
 
   # exclude kde apps
-  environment.plasma6.excludePackages = with pkgs; [
-    kdePackages.elisa
-    kdePackages.spectacle
-    kdePackages.qrca
-    kdePackages.gwenview
-    kdePackages.konsole
+  environment.gnome.excludePackages = with pkgs; [
+    gnome-tour
+    gnome-user-docs
+    gnome-calendar
+    gnome-characters
+    gnome-contacts
+    gnome-font-viewer
+    gnome-maps
+    gnome-music
+    gnome-system-monitor
+    gnome-weather
+    loupe
+    showtime
+    simple-scan
+    yelp
+    snapshot
+    decibels
+    epiphany
   ];
 
   # --------------------------------------------------------------------------------------------------------
@@ -247,7 +259,11 @@
           ]);
       };
     };
-    desktopManager.plasma6.enable = true;
+    desktopManager.gnome.enable = true;
+    gnome = {
+      core-developer-tools.enable = false;
+      games.enable = false;
+    };
     flatpak.enable = true;
   };
 
