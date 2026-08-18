@@ -79,7 +79,6 @@
     enable = true;
     settings = {
       "org/gnome/shell" = {
-        # disable-user-extensions = true; # Optionally disable user extensions entirely
         enabled-extensions = [
           pkgs.gnomeExtensions.blur-my-shell.extensionUuid
           pkgs.gnomeExtensions.dash2dock-lite.extensionUuid
