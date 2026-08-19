@@ -27,6 +27,7 @@ My personal configuration files for **NixOS** Linux (system + Home manager, buil
 ```bash
 git clone https://github.com/Quriosity0/nixconf.git ~/nixconf
 sudo nix-channel --add https://channels.nixos.org/nixos-unstable nixos
+sudo nix-channel --add https://github.com/nix-community/home-manager/archive/master.tar.gz home-manager
 sudo nix-channel --update
 NIXPKGS_ALLOW_UNFREE=1 sudo nixos-rebuild switch --flake /path/to/nixconf#asuspc --experimental-features 'nix-command flakes'
 sudo reboot

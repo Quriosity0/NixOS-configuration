@@ -4,6 +4,7 @@
   imports =
     [
       ./hardware-configuration.nix
+      <home-manager/nixos>
       # ...
     ];
 
@@ -104,7 +105,6 @@
     btop
     gnupg
     gdu
-    home-manager
     podman-compose
     podman-tui
 
