@@ -153,7 +153,7 @@
         flpull = "nix flake update";
         flchk = "nix flake check";
         update = "sudo nixos-rebuild switch --flake ~/nixconf#asuspc";
-        clean-gens = "sudo nix-collect-garbage -d";
+        clean-gens = "sudo nix-collect-garbage -d && nix-collect-garbage -d";
       };
       histSize = 10000;
       histFile = "$HOME/.zsh_history";
