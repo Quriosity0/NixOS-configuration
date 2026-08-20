@@ -6,6 +6,7 @@
   # --------------------------------------------------------------------------------------------------------
 
   imports = [
+    ./modules
     # ...
   ];
 
@@ -28,8 +29,6 @@
     zed-editor
     xnviewmp
     distrobox
-    distrobox-tui
-    boxbuddy
 
     nur.repos.trev.helium
     nur.repos.quriosity.zen-browser
