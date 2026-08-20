@@ -104,7 +104,6 @@
     btop
     gnupg
     gdu
-    home-manager
     podman-compose
     podman-tui
 
@@ -153,7 +152,7 @@
         cls = "clear";
         flpull = "nix flake update";
         flchk = "nix flake check";
-        update = "sudo nixos-rebuild switch --flake ~/nixconf#asuspc && home-manager switch --flake ~/nixconf#quriosity";
+        update = "sudo nixos-rebuild switch --flake ~/nixconf#asuspc";
         clean-gens = "sudo nix-collect-garbage -d && nix-collect-garbage -d";
       };
       histSize = 10000;

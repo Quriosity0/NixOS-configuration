@@ -30,23 +30,8 @@
   outputs = inputs@{ nixpkgs, home-manager, millennium, proxy-suite, nixcord, nur, ... }:
     let
       system = "x86_64-linux";
-      pkgs = import nixpkgs {
-        inherit system;
-        overlays = [ nur.overlays.default ];
-        config.allowUnfree = true;
-      };
     in
     {
-      homeConfigurations."quriosity" =
-        home-manager.lib.homeManagerConfiguration {
-          inherit pkgs;
-          extraSpecialArgs = { inherit inputs; };
-          modules = [
-            ./home.nix
-            ./modules
-          ];
-        };
-
       nixosConfigurations."asuspc" = nixpkgs.lib.nixosSystem {
         inherit system;
         specialArgs = { inherit inputs; };
@@ -56,6 +41,14 @@
           { imports = builtins.attrValues nur.legacyPackages.${system}.repos.quriosity.nixosModules; }
           ./configuration.nix
           ./modules/proxy-suite.nix
+
+          home-manager.nixosModules.home-manager
+          {
+            home-manager.useGlobalPkgs = true;
+            home-manager.useUserPackages = true;
+            home-manager.extraSpecialArgs = { inherit inputs; };
+            home-manager.users.quriosity = import ./home.nix;
+          }
         ];
       };
     };
