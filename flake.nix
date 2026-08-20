@@ -30,11 +30,6 @@
   outputs = inputs@{ nixpkgs, home-manager, millennium, proxy-suite, nixcord, nur, ... }:
     let
       system = "x86_64-linux";
-      pkgs = import nixpkgs {
-        inherit system;
-        overlays = [ nur.overlays.default ];
-        config.allowUnfree = true;
-      };
     in
     {
       nixosConfigurations."asuspc" = nixpkgs.lib.nixosSystem {
