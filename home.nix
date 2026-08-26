@@ -26,7 +26,6 @@
     materialgram
     hardinfo2
     vlc
-    zed-editor
     xnviewmp
     distrobox
 
@@ -71,6 +70,36 @@
         obs-multi-rtmp
         obs-livesplit-one
       ];
+    };
+
+    zed-editor = {
+      enable = true;
+      extensions = [
+        "adwaita"
+        "nix"
+        "toml"
+        "elixir"
+        "make"
+        "dockerfile"
+        "docker-compose"
+        "html"
+        "helm"
+      ];
+      userSettings = {
+        buffer_font_size = 16;
+        buffer_font_family = "UbuntuMono Nerd Font";
+        disable_ai = true;
+        telemetry = {
+          metrics = false;
+        };
+        ui_font_size = 16;
+        vim_mode = false;
+        settings = {
+          lsp = {
+
+          };
+        };
+      };
     };
   };
 
