@@ -46,11 +46,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1788487777,
-        "narHash": "sha256-Ro/e1N4ZR8/XaFF+sF9SgfPK79HM5YNEppzFj8p+0Ak=",
+        "lastModified": 1788620682,
+        "narHash": "sha256-qdXXcNrxlA35KvMH8yxlQen3pyJnV7yMDbv1QOOIOBQ=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "693e8ce0fb240a73c116a03cfd7b19269c87af88",
+        "rev": "8381f3481e4424ea0b53c9e7469c14da799d5822",
         "type": "github"
       },
       "original": {
@@ -204,11 +204,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1788605370,
-        "narHash": "sha256-v28VmIikmqO7ry1wlB7fge8tMyFCl0/Na4j5K9Z4VdA=",
+        "lastModified": 1788636348,
+        "narHash": "sha256-HvvCu1VSYzwx+ycFvTWHzHk/4RMguZ+7v1bOeiIkWmg=",
         "owner": "nix-community",
         "repo": "NUR",
-        "rev": "18b59dd81891de1cdff7732818587913324ada22",
+        "rev": "ea21b2244b08de23d08fba724ac8a45bba157050",
         "type": "github"
       },
       "original": {
@@ -225,11 +225,11 @@
         "zapret": "zapret"
       },
       "locked": {
-        "lastModified": 1788095263,
-        "narHash": "sha256-NLaMCPZfGFvFNItGjWLzoR48iCLpclnC4dDXlt5D9Fw=",
+        "lastModified": 1788613482,
+        "narHash": "sha256-7lYsJIbVCPNp9sqrrXX8K3+EOlXXHB0d6nADS+Mwydw=",
         "owner": "FUFSoB",
         "repo": "proxy-suite-flake",
-        "rev": "a456534801240870ea1ffaaff5f5ac0926b17240",
+        "rev": "1ac17f281de3bd26682d1063bf50d82487696a94",
         "type": "github"
       },
       "original": {
@@ -246,7 +246,8 @@
         "nixpkgs": "nixpkgs_2",
         "nur": "nur",
         "proxy-suite": "proxy-suite",
-        "spicetify-nix": "spicetify-nix"
+        "spicetify-nix": "spicetify-nix",
+        "waydroid-nvidia-nix": "waydroid-nvidia-nix"
       }
     },
     "spicetify-nix": {
@@ -301,6 +302,44 @@
       "original": {
         "owner": "numtide",
         "repo": "treefmt-nix",
+        "type": "github"
+      }
+    },
+    "waydroid-nvidia-nix": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ],
+        "wnv-src": "wnv-src"
+      },
+      "locked": {
+        "lastModified": 1784900959,
+        "narHash": "sha256-wh11g5RcmQR/vSPBG1q08wA9F9ZmS5IkJ97+OUVo9RU=",
+        "owner": "yigexuanmu",
+        "repo": "waydroid-nvidia-nix",
+        "rev": "180697edb1ea2c53fed49d6a07d20a39af563083",
+        "type": "github"
+      },
+      "original": {
+        "owner": "yigexuanmu",
+        "repo": "waydroid-nvidia-nix",
+        "type": "github"
+      }
+    },
+    "wnv-src": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1784896711,
+        "narHash": "sha256-D1qG0+t9+6bdIEGZw6LaiIsU3yzASwY/VF0U2PM1Pcw=",
+        "owner": "Shiro836",
+        "repo": "waydroid-nvidia",
+        "rev": "4239f9055d9ecee765cf6890227cf4d1d9f7b13e",
+        "type": "github"
+      },
+      "original": {
+        "owner": "Shiro836",
+        "ref": "v0.1.2",
+        "repo": "waydroid-nvidia",
         "type": "github"
       }
     },

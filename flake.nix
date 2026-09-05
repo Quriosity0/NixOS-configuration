@@ -8,18 +8,20 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nur = {
+      url = "github:nix-community/NUR";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     proxy-suite = {
       url = "github:FUFSoB/proxy-suite-flake";
-      inputs = {
-        nixpkgs.follows = "nixpkgs";
-      };
+      inputs.nixpkgs.follows = "nixpkgs";
     };
     nixcord = {
       url = "github:4evy/nixcord";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    nur = {
-      url = "github:nix-community/NUR";
+    waydroid-nvidia-nix = {
+      url = "github:yigexuanmu/waydroid-nvidia-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
@@ -27,7 +29,7 @@
     millennium.url = "github:SteamClientHomebrew/Millennium?dir=packages/nix";
   };
 
-  outputs = inputs@{ nixpkgs, home-manager, millennium, proxy-suite, nixcord, nur, ... }:
+  outputs = inputs@{ nixpkgs, home-manager, nur, proxy-suite, nixcord, waydroid-nvidia-nix, millennium, ... }:
     let
       system = "x86_64-linux";
     in
@@ -41,6 +43,7 @@
           { imports = builtins.attrValues nur.legacyPackages.${system}.repos.quriosity.nixosModules; }
           ./configuration.nix
           ./modules/proxy-suite.nix
+          ./modules/waydroid.nix
 
           home-manager.nixosModules.home-manager
           {
