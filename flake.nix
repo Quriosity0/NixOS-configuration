@@ -27,9 +27,10 @@
 
     spicetify-nix.url = "github:Gerg-L/spicetify-nix";
     millennium.url = "github:SteamClientHomebrew/Millennium?dir=packages/nix";
+    nix-cachyos-kernel.url = "github:xddxdd/nix-cachyos-kernel";
   };
 
-  outputs = inputs@{ nixpkgs, home-manager, nur, proxy-suite, nixcord, waydroid-nvidia-nix, millennium, ... }:
+  outputs = inputs@{ nixpkgs, home-manager, nur, proxy-suite, nixcord, waydroid-nvidia-nix, millennium, nix-cachyos-kernel, ... }:
     let
       system = "x86_64-linux";
     in
@@ -38,6 +39,12 @@
         inherit system;
         specialArgs = { inherit inputs; };
         modules = [
+          ({ pkgs, ... }: {
+            nixpkgs.overlays = [
+              nix-cachyos-kernel.overlays.pinned
+            ];
+          })
+
           { nixpkgs.overlays = [ millennium.overlays.default nur.overlays.default ]; }
           proxy-suite.nixosModules.default
           { imports = builtins.attrValues nur.legacyPackages.${system}.repos.quriosity.nixosModules; }
