@@ -20,10 +20,6 @@
       url = "github:4evy/nixcord";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    waydroid-nvidia-nix = {
-      url = "github:yigexuanmu/waydroid-nvidia-nix";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
     spicetify-nix = {
       url = "github:Gerg-L/spicetify-nix";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -36,7 +32,7 @@
     nix-cachyos-kernel.url = "github:xddxdd/nix-cachyos-kernel";
   };
 
-  outputs = inputs@{ nixpkgs, home-manager, nur, proxy-suite, nixcord, waydroid-nvidia-nix, millennium, nix-cachyos-kernel, ... }:
+  outputs = inputs@{ nixpkgs, home-manager, nur, proxy-suite, nixcord, millennium, nix-cachyos-kernel, ... }:
     let
       system = "x86_64-linux";
     in
@@ -56,7 +52,6 @@
           { imports = builtins.attrValues nur.legacyPackages.${system}.repos.quriosity.nixosModules; }
           ./configuration.nix
           ./modules/proxy-suite.nix
-          ./modules/waydroid.nix
 
           home-manager.nixosModules.home-manager
           {
