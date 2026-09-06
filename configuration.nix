@@ -124,6 +124,10 @@
           freetype fontconfig libXcursor libXi libXinerama libXScrnSaver libpng libpulseaudio
         ];
       };
+      extraCompatPackages = with pkgs; [
+        nur.repos.vladexa.proton-cachyos
+        proton-ge-bin
+      ];
     };
     appimage = {
       enable = true;
