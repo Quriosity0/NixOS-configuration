@@ -24,9 +24,15 @@
       url = "github:yigexuanmu/waydroid-nvidia-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    spicetify-nix = {
+      url = "github:Gerg-L/spicetify-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    millennium = {
+      url = "github:SteamClientHomebrew/Millennium?dir=packages/nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
-    spicetify-nix.url = "github:Gerg-L/spicetify-nix";
-    millennium.url = "github:SteamClientHomebrew/Millennium?dir=packages/nix";
     nix-cachyos-kernel.url = "github:xddxdd/nix-cachyos-kernel";
   };
 
